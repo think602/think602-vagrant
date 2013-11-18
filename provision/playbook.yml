@@ -19,4 +19,4 @@
       - pkg-config
       - vim
       - zsh
-      - git-core
+      - git
