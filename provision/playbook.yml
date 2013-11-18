@@ -1,0 +1,22 @@
+---
+# playbook.yml
+- hosts: all
+  user: vagrant
+  sudo: true
+  tasks:
+  
+  - name: Update APT package cache
+    apt: update_cache=yes
+
+  - name: Install packages
+    apt: pkg=$item state=installed
+    with_items:
+      - build-essential
+      - wget
+      - curl
+      - imagemagick
+      - openssl
+      - pkg-config
+      - vim
+      - zsh
+      - git-core
